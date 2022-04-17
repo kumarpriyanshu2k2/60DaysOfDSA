@@ -17,12 +17,21 @@ public class Palindrome {
     }
 
     static boolean isPalindrome(String word){
+        int x = 121;
+        String w = Integer.toString(x);
         word=word.toUpperCase(Locale.ROOT);
         boolean b = false;
+        if (word.length()==1){
+            b=true;
+            return b;
+        }
         for (int i=0; i<word.length()/2;i++){
             if (word.charAt(i)==word.charAt(word.length()-1-i)){
                 b = true;
-            }else{break;}
+            }else{
+                b= false;
+                break;
+            }
 
 
         }
